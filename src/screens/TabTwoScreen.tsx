@@ -1,9 +1,8 @@
 import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
+import { EditScreenInfo } from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function TabTwoScreen() {
+export const TabTwoScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
@@ -11,7 +10,7 @@ export default function TabTwoScreen() {
       <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

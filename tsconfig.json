@@ -1,6 +1,46 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "composite": true,
+    "target": "esnext",
+    "downlevelIteration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": "./src",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": [
+      "jest",
+      "webpack-env",
+      "@testing-library/jest-dom"
+    ],
+    "typeRoots": [
+      "./types/",
+      "./node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": [
+    "./App.tsx",
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./package.json"
+  ],
+  "extends": "expo/tsconfig.base"
 }
