@@ -14,8 +14,6 @@ const config = {
   measurementId: Constants.manifest?.extra?.measurementId,
 };
 
-console.log(process.env, Constants, config);
-
 const app = initializeApp(config);
 const db = getDatabase(app);
 const firestore = getFirestore(app);

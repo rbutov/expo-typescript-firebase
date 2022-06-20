@@ -24,13 +24,11 @@ export const TabOneScreen = () => {
   useEffect(() => {
     const starCountRef = ref(db, 'test');
     onValue(starCountRef, (snapshot) => {
-      console.log(snapshot.val());
       const data = snapshot.val();
       setValue(data);
     });
 
     onSnapshot(doc(firestore, 'test', 'test'), (snapshot) => {
-      console.log(snapshot.data());
       const data = snapshot.data();
       setValueFirestore(data?.value);
     });
@@ -41,7 +39,6 @@ export const TabOneScreen = () => {
       <Text style={styles.title}>Tab One</Text>
       <Text>Value: {value ? 'On' : 'Off'}</Text>
       <Text>Value Firestore: {valueFirestore ? 'On' : 'Off'}</Text>
-
       <Button title={'Toggle'} onPress={handleToggle} />
       <Button title={'Toggle Firestore'} onPress={handleToggleFirestore} />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
