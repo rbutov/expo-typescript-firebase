@@ -109,6 +109,7 @@ cypress.env.json
 
 # misc
 .env.*
+!.env.example
 .npmrc
 .eslintcache
 /tmp
